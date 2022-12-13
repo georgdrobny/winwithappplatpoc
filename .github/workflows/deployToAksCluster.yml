@@ -12,9 +12,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      ACR_LOGIN_SERVER: gdwinapp.azurecr.io
+      ACR_LOGIN_SERVER: abcjuacrabcju.azurecr.io
       AKS_NAMESPACE: health-check
-      CONTAINER_IMAGE: gdwinapp.azurecr.io/humongous-healthcare-api:${{ github.sha }}
+      CONTAINER_IMAGE: abcjuacrabcju.azurecr.io/humongous-healthcare-api:${{ github.sha }}
     steps:
     - uses: actions/checkout@master
 
