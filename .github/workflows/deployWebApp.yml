@@ -8,11 +8,19 @@ on:
     branches:
       - master
   workflow_dispatch:
-
+  
+env:
+  REACT_APP_API_URL: ${{ secrets.API_URL }}     
+  REACT_APP_API_KEY: ${{ secrets.API_KEY }} 
+  
 jobs:
   build:
     runs-on: windows-latest
 
+    defaults:                                             # <<-- Add default working directory
+      run:                                                # <<-- here to ensure deployment 
+        working-directory: ./Humongous.Healthcare.Web/    # <<-- targets correct path.
+        
     steps:
       - uses: actions/checkout@v2
 
